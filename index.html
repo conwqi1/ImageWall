@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chute Coding Challenge</title>
+  </head>
+
+  <body>
+    <div id="chute">
+      the chute app
+    </div>
+    
+    <script src="scripts/jquery-2.1.1.js"></script>
+    <script src="scripts/underscore.js"></script>
+    <script src="scripts/backbone.js"></script>
+    <script src="scripts/backbone.localStorage.js"></script>
+    <script src="scripts/chute.js"></script>
+    
+<!--templates -->
+    <script type="text/template" id="card-template">
+       <div class="view">
+         <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+         <label><%- title %></label>
+         <a class="destroy"></a>
+       </div>
+       <input class="edit" type="text" value="<%- title %>" />
+     </script>
+  </body>
+</html>
