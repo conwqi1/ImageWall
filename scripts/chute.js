@@ -51,7 +51,7 @@ $(function(){
           this.render()
         }.bind(this)
       });
-      this.listenTo(this.model, "sync", this.render);
+      this.listenTo(this.collection, "sync", this.render);
     }, 
     
     render: function(){
@@ -65,8 +65,7 @@ $(function(){
   
 // app view
   var AppView = Backbone.View.extend({
-    el: $("#chute"),
-    
+    el: $("#chute")
   })
   
   var App = new AppView;
