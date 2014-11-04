@@ -12,17 +12,37 @@
     <script src="scripts/jquery-2.1.1.js"></script>
     <script src="scripts/underscore.js"></script>
     <script src="scripts/backbone.js"></script>
-    <script src="scripts/backbone.localStorage.js"></script>
-    <script src="scripts/chute.js"></script>
+    <script src="scripts/imageWall.js"></script>
+    <script src="scripts/router.js"></script>
+    <script src="scripts/cardsIndex.js"></script>
+    <script src="scripts/cards.js"></script>
+    <script src="scripts/card.js"></script>
+
     
 <!--templates -->
     <script type="text/template" id="card-template">
-       <div class="view">
-         <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
-         <label><%- title %></label>
-         <a class="destroy"></a>
-       </div>
-       <input class="edit" type="text" value="<%- title %>" />
+      <div class='boards-index-title'>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="add_board_button">
+            Add Game
+        </button>
+      </div>
+
+      <ul class='cards-container'>
+        <% cards.each(function (card) { %>
+          <li>
+             <div class='col-xs-9'>
+                <a href="#/boards/<%= board.id %>">        
+                 <text><%= board.escape("title") %></text>
+                </a>
+             </div>
+             
+            <div class='col-xs-3'>
+                <button class="close" id="delete_board" data-id="<%= board.id %>"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button> 
+            </div>  
+          </li>
+        <% }); %>
+      </ul>
      </script>
   </body>
 </html>
