@@ -1,0 +1,52 @@
+#cards-container{
+	width: 80%;
+	margin: auto;
+}
+
+ul{
+  list-style: none;
+}
+
+
+body {
+	background: rgba(231, 231, 231, 0.43);
+	font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+
+.item {
+	background: white;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+	border-radius: 3px;
+	color: #333;
+	border: none;
+	width: 221.2px;
+}
+
+.item img {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+
+.item div{
+	width: 100%
+}
+
+
+.item h5 {
+	text-shadow: none;
+}
+
+
+.cards-container {
+	margin: 15px;
+}
+
+.info {
+	width: 100%;
+	max-width: 100%;
+	padding: 15px;
+	color: #333;
+}
